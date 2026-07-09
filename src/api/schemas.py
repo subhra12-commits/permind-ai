@@ -19,4 +19,5 @@ class RetrievedSource(BaseModel):
 class AskResponse(BaseModel):
     question: str
     answer: str
+    response_type: str
     retrieved_sources: List[RetrievedSource]

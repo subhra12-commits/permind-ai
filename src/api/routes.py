@@ -16,6 +16,7 @@ def ask_question(request: AskRequest):
         return {
             "question": result["question"],
             "answer": result["answer"],
+            "response_type": result.get("response_type", "gemini_generated"),
             "retrieved_sources": result["retrieved_results"]
         }
 
