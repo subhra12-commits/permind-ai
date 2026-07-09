@@ -1,0 +1,11 @@
+query,expected_keyword,keyword_found,top_score,latency_seconds,top_question
+What is polymorphism in Java,polymorphism,True,0.8526356220245361,1.6889,What is polymorphism?
+Explain REST API,api,True,0.848098635673523,0.0112,Explain the difference between REST API and interface.
+What is SQL injection,sql,True,0.8584668636322021,0.0129,What is SQL injection and how is it used?
+Difference between process and thread,thread,True,0.790188729763031,0.0125,Explain the difference between list and multithreading.
+What is machine learning,machine,True,0.8108631372451782,0.013,What is the purpose of regularization in machine learning?
+Tell me about yourself,about,True,0.8405863046646118,0.0133,Tell me about yourself.
+What is normalization in DBMS,normalization,True,0.873452365398407,0.0132,What is normalization in database design?
+Explain inheritance in OOP,inheritance,True,0.8431956768035889,0.0119,Explain inheritance with examples .
+What is Docker,docker,True,0.8253159523010254,0.0114,"What is Docker, and how does it work?"
+What is cloud computing,cloud,True,0.8199775218963623,0.0109,How does cloud computing handle large-scale data processing compared to edge computing?

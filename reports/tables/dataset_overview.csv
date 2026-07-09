@@ -1,0 +1,13 @@
+Column,Data Type,Missing Values,Unique Values
+id,int64,0,10449
+question,object,0,10127
+answer,object,4102,5981
+category,object,0,71
+subcategory,object,0,42
+difficulty,object,0,4
+source,object,0,2
+dataset_name,object,0,6
+interview_type,object,0,4
+language,object,0,1
+tags,object,0,311
+created_at,object,0,2

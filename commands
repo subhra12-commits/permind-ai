@@ -1,0 +1,37 @@
+python src\dataset_manager.py
+
+python src\standardization\standardize_hf.py
+python src\standardization\standardize_kaggle.py
+python src\standardization\merge_datasets.py
+
+python src\clean_dataset.py
+python src\validate_dataset.py
+
+python src\eda\01_dataset_overview.py
+python src\eda\02_statistics.py
+python src\eda\03_text_analysis.py
+python src\eda\04_visualization.py
+python src\eda\05_generate_report.py
+
+python src\preprocessing\preprocess_dataset.py
+python src\preprocessing\inspect_preprocessing.py
+
+python src\feature_engineering\tfidf_features.py
+python src\feature_engineering\embedding_features.py
+python src\feature_engineering\inspect_features.py
+
+python src\retrieval\build_index.py
+python src\retrieval\test_search.py
+
+python src\rag\test_gemini.py
+python src\rag\test_rag.py
+
+python src\evaluation\retrieval_evaluation.py
+python src\evaluation\rag_evaluation.py
+
+
+python -m src.evaluation.rag_evaluation
+
+
+uvicorn src.api.main:app --reload
+streamlit run src\ui\app.py

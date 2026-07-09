@@ -1,0 +1,91 @@
+query,latency_seconds,answer_length_words,retrieved_sources,generated_answer
+What is polymorphism in Java,8.53,253,5,"Polymorphism, meaning ""many forms,"" is a fundamental concept in Java that allows objects of different classes to be treated as objects of a common superclass. This capability provides flexibility and extensibility in your code.
+
+In simpler terms, it means an object can take on multiple forms or exhibit different behaviors based on the context.
+
+There are two main types of polymorphism in Java:
+
+1.  **Compile-time Polymorphism (Method Overloading):** This occurs when multiple methods within the same class share the same name but have different parameter lists (different number, type, or order of arguments). The compiler decides which method to call based on the arguments provided at compile time.
+    *   **Example:** A `Calculator` class might have two `add` methods: `add(int a, int b)` and `add(double a, double b)`. Depending on whether you pass integers or doubles, the appropriate `add` method will be called.
+
+2.  **Runtime Polymorphism (Method Overriding):** This occurs when a subclass provides a specific implementation for a method that is already defined in its superclass. The decision of which method to call is made at runtime, typically using the `super` keyword to refer to the superclass method.
+    *   **Example:** Imagine a `Vehicle` class with a `start()` method. A `Car` subclass and a `Bike` subclass could both override the `start()` method to provide their unique ways of starting. If you have a `Vehicle` reference pointing to a `Car` object, calling `start()` on that reference will execute the `Car`'s `start()` method at runtime.
+
+Polymorphism is crucial for writing reusable, flexible, and extensible Java programs."
+Explain REST API,19.948,319,5,"A REST API (Representational State Transfer Application Programming Interface) is an architectural style for designing networked applications. It provides a standardized and flexible way for different software systems to communicate with each other over the internet, often to exchange data or perform actions.
+
+Think of it as a set of rules and conventions for how a client (like a mobile app or a web browser) can request information or send commands to a server (where the data and logic reside).
+
+Here's a breakdown of its core concepts:
+
+*   **Resources:** Everything in a REST API is treated as a resource, which is any piece of information that can be named, like a user, a product, or an order. Each resource is identified by a unique URL (Uniform Resource Locator).
+*   **HTTP Methods:** Clients interact with these resources using standard HTTP methods, which define the type of action to be performed:
+    *   **GET:** To retrieve data from the server (e.g., get a list of all products).
+    *   **POST:** To create new data on the server (e.g., add a new user).
+    *   **PUT:** To update existing data on the server (e.g., modify a product's details).
+    *   **DELETE:** To remove data from the server (e.g., delete a user account).
+*   **Statelessness:** Each request from the client to the server must contain all the information the server needs to understand and process the request. The server does not store any client context between requests, which makes the system more reliable and scalable.
+*   **Uniform Interface:** REST APIs use a consistent and generic way to interact with resources, simplifying the overall architecture.
+
+**Example:**
+Imagine you have an online store and want to retrieve details for a specific product. Your application might send a `GET` request to an API endpoint like `https://api.yourstore.com/products/123`. The server then processes this request and sends back the product information (e.g., name, price, description) in a structured format like JSON or XML."
+What is SQL injection,8.466,217,5,"SQL injection is a type of web security vulnerability that allows an attacker to interfere with the queries an application makes to its database.
+
+In simpler terms, imagine a website where you input information, like a username in a login form. Normally, the website uses your input to build a command (a ""query"") that it sends to its database to retrieve or store information. With SQL injection, an attacker can insert malicious code into that input field. This code then becomes part of the database query, tricking the database into executing unintended commands.
+
+**Example:**
+Suppose a website constructs a login query like this:
+`SELECT * FROM users WHERE username = 'YOUR_INPUT_USERNAME' AND password = 'YOUR_INPUT_PASSWORD';`
+
+If an attacker enters `' OR 1=1; --` as the username, the query becomes:
+`SELECT * FROM users WHERE username = '' OR 1=1; --' AND password = 'YOUR_INPUT_PASSWORD';`
+
+The `OR 1=1` part is always true, and `--` comments out the rest of the original query. This often allows the attacker to bypass the login process without knowing the password, gaining unauthorized access to the system or its data.
+
+Attackers can use SQL injection to bypass authentication, retrieve sensitive data from the database, modify database content, or even delete data entirely. Understanding this vulnerability is crucial for developers to build secure applications."
+Difference between process and thread,6.88,168,5,"In simple terms:
+
+A **process** is an independent program that is running, complete with its own dedicated memory space and resources. Think of it as an entire application instance.
+
+A **thread** is a smaller unit of execution that exists *within* a process. Multiple threads can run concurrently within a single process, and they share the same memory space and resources as that parent process.
+
+**Key Difference:**
+The main distinction lies in resource allocation. A process has its own independent set of resources and memory, acting like a self-contained environment. In contrast, threads share the memory and resources of the process they belong to.
+
+**Example:**
+Imagine your web browser. The entire web browser running on your computer is a **process**. If you open multiple tabs within that browser (e.g., one tab for watching a video, another for checking email, and a third for reading an article), these different activities can be handled by separate **threads** within that single browser process. They all share the browser's overall memory and resources."
+What is machine learning,4.799,73,5,"Machine learning is a field where computer systems use algorithms and models to analyze data, identify patterns, and make predictions or decisions. Essentially, it allows systems to learn from raw or historical data to recognize patterns, detect anomalies, and even learn simpler patterns to improve performance.
+
+For example, a machine learning model could analyze historical software defect data to identify patterns and predict where new defects are likely to occur in the future."
+Tell me about yourself,8.81,230,5,"The ""Tell me about yourself"" question is a very common interview opener, but it's not a request for your life story. Interviewers use it to understand who you are professionally, why you're interested in *this specific role*, and how your background aligns with their needs.
+
+As an interview coach, I'd advise you to prepare a concise, impactful response that highlights your professional journey and your fit for the role. Here's a common and effective structure:
+
+1.  **Your Present:** Start by stating who you are professionally and what you currently do, including a key achievement or responsibility.
+2.  **Your Past:** Briefly mention 1-2 relevant experiences or skills from your background that led you to where you are today. Focus on aspects that are directly applicable to the job.
+3.  **Your Future (and why this role):** Conclude by explaining why you are excited about *this specific opportunity* and how your skills and aspirations align with the role and company.
+
+**Example Structure:**
+
+'Currently, I work as a [Your Current Role] at [Your Company], where I've gained experience in [Key Skill/Area] and successfully [Quantifiable Achievement]. My background includes [Briefly mention relevant past experience or education], which has prepared me for [relevant aspect of the new role]. I'm particularly interested in this [Specific Role Name] at [Company Name] because [Reason why it aligns with your skills, goals, and how you can contribute to their team].'"
+What is normalization in DBMS,4.79,158,5,"Normalization in DBMS is a systematic process of organizing data in a database to achieve two main goals: reducing data redundancy (duplicate data) and improving data integrity (ensuring accuracy and consistency).
+
+It accomplishes this by breaking down large tables into smaller, more manageable, and related tables. These tables are then structured according to specific rules known as normalization forms (like 1NF, 2NF, 3NF) to minimize data dependencies and ensure that data is stored logically and efficiently.
+
+**For example:** Imagine a single table storing both customer details and all the products they've ordered. Without normalization, the customer's name, address, and contact information might be repeated for every single product they've purchased. Normalization would separate this into two tables: one for customer details (Customer ID, Name, Address) and another for order details (Order ID, Customer ID, Product, Quantity). These tables are linked by the `Customer ID`, eliminating redundant customer information and making the database more efficient and easier to update."
+Explain inheritance in OOP,4.42,103,5,"Inheritance in Object-Oriented Programming (OOP) is a fundamental principle that allows a new class to inherit attributes (data) and methods (functions) from an existing class. This mechanism is crucial for facilitating code reuse and extending functionality, promoting organized and maintainable code.
+
+For example, imagine you have a `Vehicle` class with general attributes like `speed` and `color`, and methods like `accelerate()`. You could then create a `Car` class that inherits from `Vehicle`. The `Car` class would automatically have `speed`, `color`, and `accelerate()` without you having to write them again, and you could add specific attributes or methods unique to a car, such as `openTrunk()`."
+What is Docker,7.009,134,5,"Docker is an open-source platform that allows developers to package applications and all their dependencies (like libraries, configurations, and operating system tools) into standardized units called containers.
+
+Think of a container as a lightweight, standalone, executable package of software that includes everything needed to run an application. This ensures that the application works consistently and reliably across different environments, whether it's on a developer's laptop, a testing server, or in production.
+
+For example, if you're developing a web application, Docker lets you package your code, web server (like Nginx), and database into separate containers. These containers can then be easily moved and run anywhere, without worrying about conflicts or missing dependencies. To define how a container image is built, developers use a `Dockerfile`, which is a script outlining all the necessary steps and components."
+What is cloud computing,4.791,130,5,"Cloud computing is a service that delivers computing resources—like servers, storage, databases, and software—over the internet. Instead of owning and maintaining your own physical hardware, you can access these services from a central provider.
+
+It offers several key benefits:
+*   **Centralized Processing and Storage**: It provides a central location for processing and storing large amounts of data, making it ideal for analytics.
+*   **Scalability**: Businesses can quickly scale resources up or down as needed, without the upfront costs of buying physical hardware.
+*   **Centralized Security**: Security management is centralized, which simplifies implementing consistent security policies.
+
+For example, when you use an online service like Gmail or store files on Google Drive, you are using cloud computing. You don't manage the servers or storage hardware; a provider does it for you."
