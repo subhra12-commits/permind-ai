@@ -31,5 +31,7 @@ def home():
 @app.get("/health")
 def health():
     return {
-        "status": "ok"
+        "status": "healthy",
+        "service": "PrepMind AI API",
+        "version": "1.0.0"
     }

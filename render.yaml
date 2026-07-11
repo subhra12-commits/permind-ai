@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: prepmind-ai-api
+    runtime: docker
+    dockerfilePath: ./deployment/Dockerfile.backend
+    plan: free
+
+    healthCheckPath: /health
+
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+
+      - key: HF_HUB_DISABLE_SYMLINKS_WARNING
+        value: "1"
