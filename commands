@@ -39,4 +39,4 @@ streamlit run src\ui\app.py
 git status
 git add .
 git commit -m "Describe the feature or fix"
-git push
+git push origin main
