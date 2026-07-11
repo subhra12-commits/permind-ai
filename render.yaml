@@ -11,5 +11,14 @@ services:
       - key: GEMINI_API_KEY
         sync: false
 
+      - key: SEARCH_BACKEND
+        value: "tfidf"
+
+      - key: GEMINI_MODEL
+        value: "gemini-2.5-flash"
+
+      - key: TOP_K_RESULTS
+        value: "5"
+
       - key: HF_HUB_DISABLE_SYMLINKS_WARNING
         value: "1"

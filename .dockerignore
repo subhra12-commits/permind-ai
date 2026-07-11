@@ -19,3 +19,6 @@ datasets/processed
 datasets/merged
 
 src/frontend
+datasets/features/sentence_embeddings.npy
+datasets/features/faiss_index.index
+datasets/features/*.index
